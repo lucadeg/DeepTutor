@@ -1,31 +1,9 @@
+
 name: Tests
 
 on:
-  push:
-    branches:
-      - main
-      - dev
-    paths:
-      - "deeptutor/**"
-      - "deeptutor_cli/**"
-      - "tests/**"
-      - "requirements/**"
-      - "requirements.txt"
-      - "pyproject.toml"
-      - ".github/workflows/tests.yml"
-  pull_request:
-    branches:
-      - main
-      - dev
-    paths:
-      - "deeptutor/**"
-      - "deeptutor_cli/**"
-      - "tests/**"
-      - "requirements/**"
-      - "requirements.txt"
-      - "pyproject.toml"
-      - ".github/workflows/tests.yml"
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 jobs:
   import-check:
     name: Import Check (Python ${{ matrix.python-version }})
